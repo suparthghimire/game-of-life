@@ -1,7 +1,10 @@
 const start_game = document.querySelector("#start_game");
 const pause_game = document.querySelector("#pause_game");
 const reset_game = document.querySelector("#reset_game");
+const clear_board = document.querySelector("#clear_board");
+
 const colorIp = document.querySelector("#color");
+
 let color = "#DC143C";
 colorIp.addEventListener("input", () => {
   color = colorIp.value;
@@ -188,11 +191,19 @@ function main() {
     }
     update_board(board, idx);
   });
+  clear_board.addEventListener("click", () => {
+    let idx = 0;
+    board.forEach((item) => {
+      board[idx] = 0;
+      update_board(board, idx);
+      idx++;
+    });
+    console.log(board);
+  });
 
   start_game.addEventListener("click", () => {
     play_game(resolution, board);
-    // start_game.disabled = true;
-    start_game.innerText = "Resume Game";
+    start_game.disabled = true;
     pause_game.disabled = false;
   });
 }
