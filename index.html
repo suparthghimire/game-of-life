@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      canvas {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <canvas></canvas>
+      </div>
+      <div>
+        <label for="color">Change Color</label>
+        <input type="color" name="color" value="#DC143C" id="color" />
+        <button id="start_game">Play Game</button>
+        <button id="pause_game">Pause Game</button>
+        <!-- <button id="reset_game">Reset Game</button> -->
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
